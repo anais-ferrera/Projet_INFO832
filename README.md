@@ -1,1 +1,1 @@
-"# Projet_INFO832" 
+# Projet_INFO832
