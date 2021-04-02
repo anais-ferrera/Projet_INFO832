@@ -42,6 +42,7 @@ public class Clock {
 	public void setVirtual(boolean virtual) {
 		this.virtual = virtual;
 	}
+	
 	public boolean isVirtual() {
 		return this.virtual;
 	}
@@ -104,4 +105,5 @@ public class Clock {
 	public String toString() {
 		return ""+this.time;
 	}
+
 }
