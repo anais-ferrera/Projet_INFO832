@@ -135,8 +135,5 @@ public class DiscreteAction implements DiscreteActionInterface {
 		}*/
 		return more;		
 	}
-	public void setLapsTime(Integer lapsTime) {
-        this.lapsTime = lapsTime;
-    }
 	
 }

@@ -136,9 +136,6 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 		return this.onAction.hasNext() || this.offAction.hasNext();		
 	}
 
-	public void setLapsTime(Integer lapsTime) {
-        this.currentAction.setLapsTime(lapsTime);
-    }
 	
 
 }
