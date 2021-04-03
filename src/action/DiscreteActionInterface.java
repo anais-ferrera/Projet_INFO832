@@ -47,4 +47,5 @@ public interface DiscreteActionInterface extends Comparable<DiscreteActionInterf
 	 * @see java.util.Iterator#hasNext()
 	 */
 	//public boolean hasNext();
+	public void setLapsTime(Integer t);
 }

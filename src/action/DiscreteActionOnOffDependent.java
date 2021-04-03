@@ -30,12 +30,7 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 	 * @param off
 	 * @param timerOff
 	 */
-	/*public DiscreteActionOnOffDependent(Wo o, Method on, Timer timerOn, Method off, Timer timerOff){
-		this.onAction = new DiscreteAction(o, on, timerOn);
-		this.offAction = new DiscreteAction(o, off, timerOff);
-		
-		this.currentAction = this.onAction;
-	}*/
+
 	
 	public DiscreteActionOnOffDependent(Object o, String on, Timer timerOn, String off, Timer timerOff){
 		this.onAction = new DiscreteAction(o, on, timerOn);
@@ -78,11 +73,6 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 	}
 	
 	public DiscreteActionOnOffDependent(Object o, String on, TreeSet<Integer> datesOn, String off, TreeSet<Integer> datesOff){
-		/*Vector<Integer> timeLapseOn = new Vector<Integer>();
-		Vector<Integer> timeLapseOff = new Vector<Integer>();
-		
-		dates2Timalapse((TreeSet<Integer>)datesOn.clone(), (TreeSet<Integer>)datesOff.clone(), timeLapseOn, timeLapseOff);
-		*/
 		this.onAction = new DiscreteAction(o, on, new DateTimer(datesOn));
 		this.offAction = new DiscreteAction(o, off, new DateTimer(datesOff));
 		
@@ -136,6 +126,9 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 		return this.onAction.hasNext() || this.offAction.hasNext();		
 	}
 
+	public void setLapsTime(Integer lapsTime) {
+        this.currentAction.setLapsTime(lapsTime);
+    }
 	
 
 }
